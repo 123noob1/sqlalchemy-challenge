@@ -1,5 +1,5 @@
 # sqlalchemy-challenge
-For this challenge, use Python and SQLAlchemy to do basic climate analysis and data exploration into the hawaii.sqlite database. After that, create an API app using Flask to retrieve data based on the queries designed during data anlysis and exploration.
+For this challenge, use Python and SQLAlchemy to do basic climate analysis and data exploration into the <code>hawaii.sqlite</code> database. After that, create an API app using Flask to retrieve data based on the queries designed during data anlysis and exploration.
 
 ### Part 1: Analyze and Explore the Climate Data
 <i>Refer to the Jupyter Notebook file <code>climate_start.ipynb</code> located under the SurfsUp folder for the completed work.</i>
