@@ -48,18 +48,40 @@ def home():
             </style>
         </head>
         <body>
-            <h1>Welcome to the Simple API Hawaiin Weather Stations</h1>
+            <h1>Welcome to the Simple API Hawaiin Weather Stations</h1><hr/>
             <h3>Available Routes</h3>
+            <h5>You can manually copy and paste into the URL box or by clicking the link or the button.</h5>
             <ul>
-                <li><mark class='code-mark'>/api/v1.0/precipitation</mark> for the precipitation analysis</li>
-                <li><mark class='code-mark'>/api/v1.0/stations</mark> for a list of stations</li>
-                <li><mark class='code-mark'>/api/v1.0/tobs</mark> for a list of temperatures from the most-active station in the last 12 years</li>
+                <li><mark class='code-mark'>/api/v1.0/precipitation</mark> for the precipitation analysis (<a href='../api/v1.0/precipitation'>CLICK HERE</a>)</li>
+                <li><mark class='code-mark'>/api/v1.0/stations</mark> for a list of stations (<a href='../api/v1.0/stations'>CLICK HERE</a>)</li>
+                <li><mark class='code-mark'>/api/v1.0/tobs</mark> for a list of temperatures from the most-active station in the last 12 years (<a href='../api/v1.0/tobs'>CLICK HERE</a>)</li>
                 <li>
                     <mark class='code-mark'>/api/v1.0/&lt;start&gt;</mark> or <mark class='code-mark'>/api/v1.0/&lt;start&gt;/&lt;end&gt;</mark> 
-                    to get the temperature stats from a given date range by replacing <mark class='code-mark'>&lt;start/end&gt;</mark> with the date<br/>
-                    <b>Note:</b> The format date is <mark class='code-mark'>yyyy-mm-dd</mark>
+                    to get the temperature stats from a given date range by replacing <mark class='code-mark'>&lt;start/end&gt;</mark> with the date<br/><br/>                  
+                    <b>Use the following input boxes to query by dates</b><br/>
+                    <b>Note:</b> The format date is <mark class='code-mark'>yyyy-mm-dd</mark><br/>
+                    <form>
+                        <label>Start Date</label>&ensp;<input type='text' id='start'><br/>
+                        <label>End Date</label>&ensp;&nbsp;<input type='text' id='end'><br/>
+                        <input type='button' value='Submit' onclick='goto(start,end)'>
+                    </form>
                 </li>
             </ul>
+
+            <script>
+                function goto(start, end) {
+                    var start_ = document.getElementById('start');
+                    var end_ = document.getElementById('end');
+
+                    if ((start_ && start_.value) && (end_ && end_.value)) {
+                        window.location.href='../api/v1.0/' + start_.value + '/' + end_.value;
+                    } else if ((start_ && start_.value) && !(end_ && end_.value)) {
+                        window.location.href='../api/v1.0/' + start_.value;
+                    } else {
+                        window.location.href='../api/v1.0/error';
+                    }
+                }
+            </script>
         </body>
         '''
 

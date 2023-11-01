@@ -43,3 +43,14 @@ To perform the data anlysis and exploration, the following steps were taken:
             
             return check_pass
         ```
+
+#### Using the API page
+You can access different route by:
+- clicking on the <code>CLICK HERE</code> for predesignated query routes.
+- Entering the dates into input boxes for <code>start</code> and <code>end</code> dates then hit submit for custom date ranges where your input will be calculated.
+
+## References:
+- JavaScript was used in the home page to allow interactions and the sources to help writing the script came from the following pages:
+    - https://stackoverflow.com/questions/8803412/check-if-an-html-input-element-is-empty-or-has-no-value-entered-by-user
+    - https://www.w3schools.com/js/js_if_else.asp
+    - https://stackoverflow.com/questions/41216153/javascript-error-object-htmlinputelementobject-htmlinputelement
