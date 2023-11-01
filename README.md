@@ -48,7 +48,7 @@ You can access different route by:
 - clicking on the <code>CLICK HERE</code> for predesignated query routes.
 - Entering the dates into input boxes for <code>start</code> and <code>end</code> dates then hit submit for custom date ranges where your input will be calculated.
 
-![Alt text](/Resources/api_app.png)
+<center>![Alt text](/Resources/api_app.png)</center>
 
 ## References:
 - JavaScript was used in the home page to allow interactions and the sources to help writing the script came from the following pages:
