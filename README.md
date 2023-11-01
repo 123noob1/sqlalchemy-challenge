@@ -1,7 +1,7 @@
 # sqlalchemy-challenge
 For this challenge, use Python and SQLAlchemy to do basic climate analysis and data exploration into the hawaii.sqlite database. After that, create an API app using Flask to retrieve data based on the queries designed during data anlysis and exploration.
 
-###Part 1: Analyze and Explore the Climate Data
+### Part 1: Analyze and Explore the Climate Data
 <i>Refer to the Jupyter Notebook file <code>climate_start.ipynb</code> located under the SurfsUp folder for the completed work.</i>
 
 To perform the data anlysis and exploration, the following steps were taken:
@@ -16,7 +16,7 @@ To perform the data anlysis and exploration, the following steps were taken:
     3) Calculate the <code>min</code>, <code>max</code>, and <code>avg</code> temperatures on the most-active station ID.
     4) Design a 12 months of temperature observation <code>tobs</code> data and plot using histogram to show the data.
 
-###Part 2: Design the Climate App
+### Part 2: Design the Climate App
 <i>Refer to the <code>app.py</code> file located under the SurfsUp folder  and run from there for this section.</i>
 
 1) Design Flask API based on the queries used in previous part.
@@ -26,7 +26,7 @@ To perform the data anlysis and exploration, the following steps were taken:
     - <code>/api/v1.0/tobs</code> to return <code>date</code> and temperature <code>tobs</code> observations for most-active station from previous year data
     - <code>/api/v1.0/&lt;start&gt;</code> to return <code>min</code>, <code>max</code>, and <code>avg</code> temperatures from the given <code>start</code> date
     - <code>/api/v1.0/&lt;start&gt;/&lt;end&gt;</code> to return <code>min</code>, <code>max</code>, and <code>avg</code> temperatures between the given <code>start</code> and <code>end</code> dates
-        -- To verify the custom date input for the <code>start</code> and <code>end</code> dates, function <code>is_date_validate</code> was created and used to validate before running the query.
+        - To verify the custom date input for the <code>start</code> and <code>end</code> dates, function <code>is_date_validate</code> was created and used to validate before running the query.
 
         ```
         def is_date_validate(date):
