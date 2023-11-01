@@ -26,7 +26,7 @@ To perform the data anlysis and exploration, the following steps were taken:
     - <code>/api/v1.0/tobs</code> to return <code>date</code> and temperature <code>tobs</code> observations for most-active station from previous year data
     - <code>/api/v1.0/&lt;start&gt;</code> to return <code>min</code>, <code>max</code>, and <code>avg</code> temperatures from the given <code>start</code> date
     - <code>/api/v1.0/&lt;start&gt;/&lt;end&gt;</code> to return <code>min</code>, <code>max</code>, and <code>avg</code> temperatures between the given <code>start</code> and <code>end</code> dates
-        - To verify the custom date input for the <code>start</code> and <code>end</code> dates, function <code>is_date_validate</code> was created and used to validate before running the query.<br/>
+        - To verify the custom date input for the <code>start</code> and <code>end</code> dates, function <code>is_date_validate</code> was created and used to validate before running the query.
         ```
         def is_date_validate(date):
             # Create validation variables
@@ -48,7 +48,7 @@ You can access different route by:
 - clicking on the <code>CLICK HERE</code> for predesignated query routes.
 - Entering the dates into input boxes for <code>start</code> and <code>end</code> dates then hit submit for custom date ranges where your input will be calculated.
 
-<center><img='https://github.com/123noob1/sqlalchemy-challenge/blob/main/Resources/api_app.png?raw=true'/></center>
+![Alt text](/Resources/api_app.png)
 
 ## References:
 - JavaScript was used in the home page to allow interactions and the sources to help writing the script came from the following pages:
