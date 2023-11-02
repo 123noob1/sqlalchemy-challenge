@@ -163,7 +163,9 @@ def temperatures():
 @app.route('/api/v1.0/<start>')
 def get_temp_start(start):
     # Validate the date entered before proceeding
-    if is_date_validate(start):
+    start_is_date = is_date_validate(start)
+
+    if start_is_date:
         # Set query
         query = session.query(func.min(measurement.tobs), func.max(measurement.tobs), func.avg(measurement.tobs)).filter(measurement.date >= start).all()
         
@@ -187,7 +189,10 @@ def get_temp_start(start):
 @app.route('/api/v1.0/<start>/<end>')
 def get_temp_start_end(start, end):
     # Validate the start and end dates before proceeding
-    if is_date_validate(start) and is_date_validate(end):
+    start_is_date = is_date_validate(start)
+    end_is_date = is_date_validate(end)
+
+    if start_is_date and end_is_date:
 
         if not start.replace('-','') > end.replace('-',''):
             # Set query
@@ -211,7 +216,7 @@ def get_temp_start_end(start, end):
         
         return jsonify({"error": f"Start date '{start}' cannot be greater than the end date '{end}'"}), 404
     
-    return jsonify({"error": f"Date in proper format (yyyy-mm-dd) or is not a date <Start date '{start}' = {is_date_validate(start)} | End date '{end}' = {is_date_validate(end)}>"}), 404
+    return jsonify({"error": f"Date not in proper format (yyyy-mm-dd) or is not a date <Start date '{start}' = {start_is_date} | End date '{end}' = {end_is_date}>"}), 404
 
 ##############################################
 # Set up function for reuse in validating date
@@ -220,7 +225,7 @@ def is_date_validate(date):
     # Create validation variables
     check_pass = False
 
-    # Do try to verify the input
+    # Do try to verify the input and return false regardless of exception
     try:    
         year, month, day = date.split('-')
         dt.datetime(int(year), int(month), int(day))
