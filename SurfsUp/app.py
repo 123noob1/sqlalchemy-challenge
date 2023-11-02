@@ -63,20 +63,17 @@ def home():
                     <form>
                         <label>Start Date</label>&ensp;<input type='text' id='start'><br/>
                         <label>End Date</label>&ensp;&nbsp;<input type='text' id='end'><br/>
-                        <input type='button' value='Submit' onclick='goto()'>
+                        <input type='button' value='Submit' onclick="goto(document.getElementById('start'), document.getElementById('end'))">
                     </form>
                 </li>
             </ul>
 
             <script>
-                function goto() {
-                    var start_ = document.getElementById('start');
-                    var end_ = document.getElementById('end');
-                    
-                    if ((start_ && start_.value) && (end_ && end_.value)) {
-                        window.location.href='../api/v1.0/' + start_.value + '/' + end_.value;
-                    } else if ((start_ && start_.value) && !(end_ && end_.value)) {
-                        window.location.href='../api/v1.0/' + start_.value;
+                function goto(start, end) {
+                    if ((start && start.value) && (end && end.value)) {
+                        window.location.href='../api/v1.0/' + start.value + '/' + end.value;
+                    } else if ((start && start.value) && !(end && end.value)) {
+                        window.location.href='../api/v1.0/' + start.value;
                     } else {
                         window.location.href='../api/v1.0/error';
                     }
