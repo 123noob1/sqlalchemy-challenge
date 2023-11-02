@@ -63,16 +63,16 @@ def home():
                     <form>
                         <label>Start Date</label>&ensp;<input type='text' id='start'><br/>
                         <label>End Date</label>&ensp;&nbsp;<input type='text' id='end'><br/>
-                        <input type='button' value='Submit' onclick='goto(start,end)'>
+                        <input type='button' value='Submit' onclick='goto()'>
                     </form>
                 </li>
             </ul>
 
             <script>
-                function goto(start, end) {
+                function goto() {
                     var start_ = document.getElementById('start');
                     var end_ = document.getElementById('end');
-
+                    
                     if ((start_ && start_.value) && (end_ && end_.value)) {
                         window.location.href='../api/v1.0/' + start_.value + '/' + end_.value;
                     } else if ((start_ && start_.value) && !(end_ && end_.value)) {
