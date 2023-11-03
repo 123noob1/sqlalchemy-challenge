@@ -47,6 +47,7 @@ To perform the data anlysis and exploration, the following steps were taken:
 You can access different route by:
 - clicking on the <code>CLICK HERE</code> for predesignated query routes.
 - Entering the dates into input boxes for <code>start</code> and <code>end</code> dates then hit submit for custom date ranges where your input will be calculated.
+- Or manually copy and paste the path into the URL address bar, remember to replace the <code>&lt;start&gt;</code> or <code>&lt;end&gt;</code> with a date value <code>yyyy-mm-dd</code>. For any other values, the program will return an error.
 
 ![Alt text](/Resources/api_app.png)
 
