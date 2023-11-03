@@ -51,7 +51,7 @@ You can access different route by:
 
 ![Alt text](/Resources/api_app.png)
 
-## References:
+## References
 - JavaScript was used in the home page to allow interactions and the sources to help writing the script came from the following pages:
     - https://stackoverflow.com/questions/8803412/check-if-an-html-input-element-is-empty-or-has-no-value-entered-by-user
     - https://www.w3schools.com/js/js_if_else.asp
